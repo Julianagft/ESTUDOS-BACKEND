@@ -1,16 +1,12 @@
-public class Controlador {
-    public static void main(String[] args) {
-       ControleRemoto c1 = new ControleRemoto();
-
-        c1.ligar();
-        c1.desligar();
-        c1.abrirMenu();
-       c1.fecharMenu();
-        c1.maisVolume();
-        c1.menosVolume();
-        c1.ligarMudo();
-        c1.desligarMudo();
-        c1.play();
-        c1.pause();
-    }
+public interface Controlador {
+    public abstract void ligar();
+    public abstract void desligar();
+    public abstract void abrirMenu();
+    public abstract void fecharMenu();
+    public abstract void maisVolume();
+    public abstract void menosVolume();
+    public abstract void ligarMudo();
+    public abstract void desligarMudo();
+    public abstract void play();
+    public abstract void pause();
 }

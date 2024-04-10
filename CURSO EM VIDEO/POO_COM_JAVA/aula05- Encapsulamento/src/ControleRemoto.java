@@ -1,4 +1,4 @@
-public class ControleRemoto extends Controlador {
+public class ControleRemoto implements Controlador {
     // ATRIBUTOS
     private int volume;
     private boolean ligado;
@@ -6,93 +6,123 @@ public class ControleRemoto extends Controlador {
 
     // MÉTODO CONSTRUTOR
     public ControleRemoto() {
-        volume = 50;
-        ligado = false;
-        tocando = false;
+        this.volume = 50;
+        this.ligado = false;
+        this.tocando = false;
     }
 
     // MÉTODOS ESPECIAIS
-    public int getVolume() {
+
+    // Eu deixei todos 'private' apenas para provar que dá pra fazer assim, mas não é recomendado.
+
+    private int getVolume() {
         return volume;
     }
 
-    public void setVolume(int volume) {
+    private void setVolume(int volume) {
         this.volume = volume;
     }
 
-    public boolean getLigado() {
+    private boolean getLigado() {
         return ligado;
     }
 
-    public void setLigado(boolean ligado) {
+    private void setLigado(boolean ligado) {
         this.ligado = ligado;
     }
 
-    public boolean getTocando() {
+    private boolean getTocando() {
         return tocando;
     }
 
-    public void setTocando(boolean tocando) {
+    private void setTocando(boolean tocando) {
         this.tocando = tocando;
     }
 
+
+    // MÉTODOS ABSTRATOS
+
+    @Override
     public void ligar() {
         setLigado(true);
     }
 
+    @Override
     public void desligar() {
         setLigado(false);
     }
 
+    @Override
     public void abrirMenu() {
-        System.out.println(getLigado());
-        System.out.println(getVolume());
+        System.out.println("---------- MENU ----------");
+        System.out.println("Está ligado? " + this.getLigado());
+        System.out.println("Está tocando ? " + this.getTocando());
+        System.out.println("Volume: " + this.getVolume());
 
-        for (int i = 0; i < getVolume(); i += 10) {
+        for (int i = 0; i <= this.getVolume(); i += 10) {
             System.out.print("|");
+            System.out.print(" ");
         }
-
-        System.out.println(getTocando());
     }
 
+    @Override
     public void fecharMenu() {
-
+        System.out.println("Fechando Menu");
     }
 
+    @Override
     public void maisVolume() {
-        if(getLigado()) {
-            setVolume(getVolume() + 1);
+        if(this.getLigado()) {
+            this.setVolume(this.getVolume() + 5);
+        } else {
+            System.out.println("A TV está desligada.");
         }
     }
 
+    @Override
     public void menosVolume() {
-        if(getLigado()) {
-            setVolume(getVolume() - 1);
+        // vai diminuir o volume de 5 em 5;
+        if(this.getLigado()) {
+            this.setVolume(this.getVolume() - 5);
+        } else {
+            System.out.println("A TV está desligada.");
         }
+
     }
 
+    @Override
     public void ligarMudo() {
-        if (getLigado() && getVolume() > 0) {
-          setVolume(0);
+        if (this.getLigado() && this.getVolume() > 0) {
+          this.setVolume(0);
+        } else {
+            System.out.println("A TV está desligada.");
         }
     }
 
+    @Override
     public void desligarMudo() {
-        if (getLigado() && getVolume() == 0) {
-            setVolume(50);
+        if (this.getLigado() && this.getVolume() == 0) {
+            this.setVolume(50);
+        } else {
+            System.out.println("A TV está desligada.");
         }
     }
 
+    @Override
     public void play() {
-        if(getLigado() && !getTocando()) {
-            setTocando(true);
+        if(this.getLigado() && !(this.getTocando())) {
+            this.setTocando(true);
+        } else {
+            System.out.println("A TV está desligada.");
         }
     }
 
+    @Override
     public void pause() {
-        if (getLigado() && getTocando()) {
-            setTocando(false);
+        if (this.getLigado() && this.getTocando()) {
+            this.setTocando(false);
+        } else {
+            System.out.println("A TV está desligada.");
         }
     }
-
 }
