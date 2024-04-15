@@ -15,7 +15,7 @@ function trataRequisicao(req, res) {
     }
 
 }
-function trataUsers(req, res) {
+function trataUsers(req, res) { 
     switch (req.method) {
         case "POST":
             res.end(JSON.stringify({"retorno":"usuário criado com sucesso!" }));
