@@ -11,7 +11,7 @@ public class Lutador {
 
     public void apresentar() {
         System.out.println("--------------------------- ") ;
-        System.out.println("CHEGOU A HORA! Apresentamos o lutador " + this.getNome());
+        System.out.println("Apresentando o lutador " + this.getNome());
         System.out.println("Diretamente de " + this.getNacionalidade());
         System.out.println("com " + this.getIdade() + " anos e " + this.getAltura() + " de altura!");
         System.out.println("Pesando " + this.getPeso() + " Kg");
@@ -73,11 +73,11 @@ public class Lutador {
         if(this.peso < 52.2) {
             this.categoria = "Inválido";
         } else if(this.peso <= 70.3) {
-            this.categoria = "Leve";
+            this.categoria = "LEVE";
         } else if(this.peso <= 83.9) {
-            this.categoria = "Médio";
+            this.categoria = "MÉDIO";
         } else if(this.peso <= 120) {
-            this.categoria = "Pesado";
+            this.categoria = "PESADO";
         } else {
             this.categoria = "Inválido";
         }
