@@ -2,13 +2,17 @@ const UserRepository = require("../repositories/UserRepository");
 
 const userRepository = new UserRepository();
 
-function listUsers(req, res) {
-  return res.send("Olá Mundo");
+class UserController {
+
+  listUsers = (req, res) => {
+    
+    return res.json(userRepository.getAllUsers());
+  }
+
+  createUser = (req, res) => {
+    userRepository.saveUser(req.body);
+    return res.send(JSON.stringify({"resp":"Usuário Salvo"}));
+  }
 }
 
-function createUser(req, res) {
-  userRepository.saveUser(req.body);
-  return res.send("Deu certo");
-}
-
-module.exports = { listUsers, createUser };
+module.exports = UserController;

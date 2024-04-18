@@ -34,7 +34,8 @@ public class Luta {
            this.desafiante.apresentar();
 
            Random aleatorio = new Random();
-           int vencedor = aleatorio.nextInt(3); // Ele irá gerar três possíveis resultado (0, 1 ou 2);
+           int vencedor = aleatorio.nextInt(3); // Cria um resultado aleatório;
+           // Ele irá gerar três possíveis resultado (0, 1 ou 2);
            System.out.println("------------------------------------------");
            switch(vencedor) {
                case 0: // Empate;

@@ -1,0 +1,25 @@
+{
+    "clients": {
+        "1713465037226": {
+            "nome": "Juliana"
+        },
+        "1713465073684": {
+            "nome": "Juliana Rodrigues",
+            "idade": 29
+        },
+        "1713465095329": {
+            "nome": "Maria Tita Rodrigues",
+            "idade": 6
+        },
+        "1713465293723": {
+            "nome": "Francisco Tico Rodrigues",
+            "Apelido": "Gordo",
+            "Idade": 13
+        },
+        "1713465329141": {
+            "nome": " Ceara Rodrigues",
+            "Apelido": "Feia",
+            "Idade": 12
+        }
+    }
+}
