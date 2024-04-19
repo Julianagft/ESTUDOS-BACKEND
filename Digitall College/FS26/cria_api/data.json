@@ -1,1 +1,18 @@
-[{"name":"Tita","idade":5,"cor":"Branca"},{"name":"Gordo"}]
+[
+    {
+        "item": "mochila preta",
+        "id": 1
+    },
+    {
+        "item": "carteira azul",
+        "id": 2
+    },
+    {
+        "item": "estojo",
+        "id": 3
+    },
+    {
+        "item": "bolsa",
+        "id": 4
+    }
+]

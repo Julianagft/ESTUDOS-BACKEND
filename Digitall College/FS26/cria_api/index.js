@@ -32,9 +32,23 @@ const server = http.createServer((req, res) => {
                     res.end(JSON.stringify({message: "Internal Server Error"}));
                     return;
                 }
-                
+
+                let parsedBody = JSON.parse(body)
+
+                if(!parsedBody?.id){
+                    res.writeHead(400, {'Content-Type': "application/json"});
+                    res.end(JSON.stringify({message: "Bad Request - id is required"}));
+                }
+
                 let items = JSON.parse(data);
-                items.push(JSON.parse(body));
+
+                if(items.some(obj => obj.id === body.id)) {
+                    res.writeHead(400, {"Content-Type": "application/json"});
+                    res.end(JSON.stringify({message: "Bad Request - id  already exists"}));
+                    return;
+                } // Verifica se existe algum item ja com aquele id antes de enviar a requisição; 
+
+                items.push(parsedBody);
 
                 fs.writeFile(FILE_PATH, JSON.stringify(items), (err) => {
                     if(err) {
@@ -49,13 +63,78 @@ const server = http.createServer((req, res) => {
                 })
             });
 
+        } else  if(method === "PUT" && url.includes("/items")) {
+            const itemId = url.split('/')[2];
+            fs.readFile(FILE_PATH, "utf8", (err, data) => {
+                if(err) {
+                    res.writeHead(500, {"Content-Type": "application/json"});
+                    res.end(JSON.stringify({message: "Internal Server Error"}));
+                    return;
+                }
+                let items = JSON.parse(data);
+                const updatedItem = JSON.parse(body);
+                items = items.map(item => {
+                    if(item.id === Number(itemId)) {
+                        return {
+                            ...item,
+                            ...updatedItem,
+                        }
+                    }
+                    return item;
+                    
+                })
+
+                fs.writeFile(FILE_PATH, JSON.stringify(items), (err) => {
+                    if(err) {
+                        console.error(err);
+                        res.writeHead(500, {"Content-Type": "application/json"});
+                        res.end(JSON.stringify({message: "Internal Server Error"}));
+                        return;
+                    }
+
+                    res.writeHead(200, {"Content-Type": "application/json"});
+                    res.end(JSON.stringify({message: "item updated"}));
+                    return;
+                })
+            });
+        } else  if(method === "DELETE" && url.includes("/items")) {
+            const itemId = url.split('/')[2];
+
+            if(!itemId) {
+                res.writeHead(400);
+                res.end("Id do ítem é obrigatório");
+            }
+            fs.readFile(FILE_PATH, "utf8", (err, data) => {
+                if(err) {
+                    res.writeHead(500, {"Content-Type": "application/json"});
+                    res.end(JSON.stringify({message: "Internal Server Error"}));
+                    return;
+                }
+                let items = JSON.parse(data);
+                const updatedItem = JSON.parse(body);
+                items = items.filter(item => item.id !== Number(itemId));
+
+                fs.writeFile(FILE_PATH, JSON.stringify(items), (err) => {
+                    if(err) {
+                        console.error(err);
+                        res.writeHead(500, {"Content-Type": "application/json"});
+                        res.end(JSON.stringify({message: "Internal Server Error"}));
+                        return;
+                    }
+
+                    res.writeHead(200, {"Content-Type": "application/json"});
+                    res.end(JSON.stringify({message: "item deleted"}));
+                    return;
+                })
+            });
+        } else {
+            res.whiteHead(404, {"Content-Type": "application/json"});
+            res.end(JSON.stringify({message: "Not Found"}));
         }
-    })
+    });
 });
 
 server.listen(localhhost, () => {
     console.log(`Estou rodando na porta http://localhost:${localhhost}`)
-})
+});
 
-// O código de resposta de sucesso sempre será 200;
-// Mesmo que o cliente não receba a resposta mas o processo da API não para; 
