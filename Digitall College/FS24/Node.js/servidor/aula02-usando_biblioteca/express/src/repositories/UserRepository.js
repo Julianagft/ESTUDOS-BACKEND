@@ -1,3 +1,5 @@
+// Forma de acessar os dados; 
+
 // const fs = require("fs");
 const { JsonDB, Config } = require('node-json-db');
 
