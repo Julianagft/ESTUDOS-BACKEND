@@ -1,5 +1,6 @@
 class UserController  {
 
+
     users = [];
 
     //  Ja criar como Arrow Functions protege o 'this';
