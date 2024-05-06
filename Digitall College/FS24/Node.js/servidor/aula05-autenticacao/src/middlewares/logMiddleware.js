@@ -3,6 +3,8 @@ function logMiddleware(req, resp, next) {
 
     // resp.send("Policial disfarçado!!!")
 
+    console.log("Passei por aqui!")
+
     next();
 }
 
