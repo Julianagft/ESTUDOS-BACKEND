@@ -13,6 +13,7 @@ const server = http.createServer((req, res) => {
     const name = urlInfo.query.name;
     
     if(!name) {
+        // 'data representa o conteúdo do arquivo;
         fs.readFile('index.html', (err, data) => {
 
             if (err) {
@@ -26,7 +27,8 @@ const server = http.createServer((req, res) => {
         });
     } else {
 
-        const nameNewLine = name + '\r\n'; //Estou acrescentando a quebra de linha (usando r e n estou garantindo que funcione em qualquer sistema operacional);
+        const nameNewLine = name + '\r\n'; 
+        //Estou acrescentando a quebra de linha (usando r e n estou garantindo que funcione em qualquer sistema operacional);
         // Adicionei a virgula(,) para separar os arquivos por vírgula alem da quebra. Muito util caso eu estivesse guardando em um array por exemplo. (Não deu certo :/)
 
         // Trocamos o 'writeFile' para 'appendFile' que garante que o nome seja adicionado e não substituído; 
@@ -34,9 +36,7 @@ const server = http.createServer((req, res) => {
         fs.appendFile("arquivo.txt", nameNewLine, function(err, data) {
             res.writeHead(302, {
                 Location: "/",
-            })
-            // 302 é o status redirect. Quando o usuário escrever o nome eu vou redirecionar de volta a home. Assim posso escrever o nome quantas vezes eu quiser.
-            
+            })            
             return res.end();
         })
     }
