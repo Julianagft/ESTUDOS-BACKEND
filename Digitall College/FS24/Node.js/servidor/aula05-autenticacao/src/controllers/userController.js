@@ -1,3 +1,5 @@
+// Lida com a requisição e a resposta;
+
 class UserController {
   constructor(userService) {
     this.userService = userService;

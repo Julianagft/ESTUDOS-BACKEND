@@ -1,3 +1,5 @@
+// Interage com o repositório de usuários
+
 class UserService {
   constructor(userRepository) {
     this.userRepository = userRepository;
