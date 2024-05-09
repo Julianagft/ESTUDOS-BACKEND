@@ -1,4 +1,4 @@
-// Lida com a requisição e a resposta;
+// Lida com as requisições HTTP e a resposta;
 
 class UserController {
   constructor(userService) {

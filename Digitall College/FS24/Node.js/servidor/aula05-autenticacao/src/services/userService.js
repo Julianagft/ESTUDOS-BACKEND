@@ -1,4 +1,4 @@
-// Interage com o repositório de usuários
+// Interage com o repositório de usuários e chama os métodos apropriados do serviço;
 
 class UserService {
   constructor(userRepository) {
