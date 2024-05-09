@@ -8,7 +8,7 @@ class UserService {
   create = (user) => {
     this.userRepository.create(user);
 
-    return user;
+    return {message:"Usuário cadastrado com sucesso!", user};
   };
 
   listAll = () => {
