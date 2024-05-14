@@ -4,13 +4,25 @@ class UserRepository {
   constructor() {
     // Configuração do banco de dados JSON
     this.users = [
-      {
-        "nome": "Tita Rodrigues",
-        "email": "tita@email.com",
-        "senha": "Tita123456",
-        "id": 17
-      }
-    ];
+    {
+      "nome": "Juliana Rodrigues",
+      "email": "ju@email.com",
+      "senha": "Ju123",
+      "id": 1
+    },
+    {
+      "nome": "Fabiola Alves",
+      "email": "fabiola@email.com",
+      "senha": "Fabiula123",
+      "id": 2
+    },
+    {
+      "nome": "Ronniel Lima",
+      "email": "ronnier@email.com",
+      "senha": "Ronnier12345!",
+      "id": 3
+    }
+  ];
   }
   
   create = (user) => {
@@ -52,24 +64,31 @@ class UserRepository {
 
   updateUser = (id, newData) => {
   
-    const index = this.users.findIndex(usuario => usuario.id == id)
+    const index = this.users.findIndex(usuario => usuario.id == id);
     
     const newUser = this.users[index] = {
       ...newData
-    }
-    // const index = this.users.find(usuarios => usuarios.id == id)
-    // const dadosAtualizados =  
-    
-
+    };
+  
     if (index  == -1) {
       throw new Error(`Usuário não encontrado!`)
     } 
 
     return newUser;
-
         
-  }
-  
+  };
+
+  deleteUser = (id) => {
+    const index = this.users.filter(usuario => usuario.id !== id);
+
+    if (!index) {
+      throw new Error(`Usuário não encontrado!`)
+    } 
+
+    this.users = index;
+
+  };
+ 
 }
 
 module.exports = UserRepository;

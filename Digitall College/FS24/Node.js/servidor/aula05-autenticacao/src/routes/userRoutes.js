@@ -11,10 +11,12 @@ const userController = new UserController(userService);
 
 userRoutes.get("/", userController.listAll);
 
-userRoutes.get("/:id", userController.findById);
-
 userRoutes.post("/", userController.create);
 
+userRoutes.get("/:id", userController.findById);
+
 userRoutes.put("/:id", userController.updateUser);
+
+userRoutes.delete("/:id", userController.deleteUser);
 
 module.exports = userRoutes;

@@ -36,6 +36,14 @@
       const usuarioAtualizado = this.userService.updateUser(id, newData);
 
       return response.json(usuarioAtualizado); 
+    };
+
+    deleteUser = (request, response) => {
+      const id = request.params.id;
+
+      this.userService.deleteUser(id); 
+      return response.json({ message: "Usuário deletado com sucesso!" });
+  
     }
   }
 

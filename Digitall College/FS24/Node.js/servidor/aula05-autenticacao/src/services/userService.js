@@ -27,6 +27,13 @@ class UserService {
 
     return {message: "Usuario atualizado com sucesso!", usuarioAtualizado} ;
   }
+
+  deleteUser = (id) => {
+    
+    const usuarioDeletado = this.userRepository.deleteUser(id)
+
+    return {message: "Usuário deletado com sucesso!"}
+  }
 }
 
 module.exports = UserService;
