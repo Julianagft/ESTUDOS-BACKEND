@@ -5,7 +5,7 @@
 
     const unicoUsuario = {
         email: "juliana@email.com",
-        senha: "juliana123"
+        senha: "123"
     }
 
     authRoutes.post("/login", (req, res) => {

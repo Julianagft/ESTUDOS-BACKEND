@@ -21,10 +21,6 @@ app.listen(8080, () => {
   console.log("estou rodando na porta 8080!");
 });
 
-// adicionar a camada de servico, (services), OK
-//ex: RN1 - TOdo usuario cadastrado deve ter nome, email, senha OK
-//ex: RN2 - Toda senha precisar ter no minimo 8 carac, e pelo menos uma letra maiscula OK
-//ex: RN3 - O email tem que unico por usuario OK
 
 // Criar metodos faltando, PUT e DELETE
 // PUT deve atualizar um usuario pelo seu id

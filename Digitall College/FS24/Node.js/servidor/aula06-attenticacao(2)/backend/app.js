@@ -55,3 +55,9 @@ app.post("/auth/login", (req, res) => {
 app.listen(8080, () => {
   console.log("rodando na 8080");
 });
+
+
+// Aplicar essa lógica no projeto anterior
+// Criar um middleware de autorização:
+// TER Papeis por usuários, apenas ADMIN pode criar usuários
+// Apenas o usuário que criou uma tarefa pode apagar

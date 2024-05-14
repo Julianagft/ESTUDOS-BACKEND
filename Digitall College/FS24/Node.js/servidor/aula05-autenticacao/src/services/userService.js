@@ -21,6 +21,12 @@ class UserService {
 
     return usuarioEncontrado;
   };
+
+  updateUser = (id, newData) => {
+    const usuarioAtualizado = this.userRepository.updateUser(id, newData);
+
+    return {message: "Usuario atualizado com sucesso!", usuarioAtualizado} ;
+  }
 }
 
 module.exports = UserService;

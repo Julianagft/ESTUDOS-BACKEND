@@ -2,11 +2,13 @@ const jwt = require("jsonwebtoken");
 
 
 function authMiddleware(req, res, next) {
+    const chaveSecreta = "juliana123";
+
 
     try {
         const token = req.headers.token;
 
-        const tokenValido = jwt.verify(token, "juliana123");
+        const tokenValido = jwt.verify(token, chaveSecreta);
 
         if(token && tokenValido) {
             next();

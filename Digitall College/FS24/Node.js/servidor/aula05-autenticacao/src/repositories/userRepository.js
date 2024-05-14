@@ -42,6 +42,17 @@ class UserRepository {
       throw error;
     }
   };
+
+  updateUser = (id, newData) => {
+    const index = this.users.findIndex(usuario => usuario.id === id); 
+  
+    if (index === -1) {
+      throw new Error(`Usuário não encontrado!`)
+    }
+  
+    Object.assign(this.users[index], newData);
+  }
+  
 }
 
 module.exports = UserRepository;

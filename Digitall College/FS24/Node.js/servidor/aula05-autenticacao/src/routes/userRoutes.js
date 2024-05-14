@@ -15,4 +15,6 @@ userRoutes.get("/:id", userController.findById);
 
 userRoutes.post("/", userController.create);
 
+userRoutes.put("/:id", userController.updateUser);
+
 module.exports = userRoutes;
