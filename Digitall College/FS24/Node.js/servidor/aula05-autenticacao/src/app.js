@@ -9,7 +9,7 @@ app.use(express.json());
 
 // app.use(logMiddleware);
 
-app.get("/", authMiddleware, (req, resp) => {
+app.get("/", (req, resp) => {
   resp.send("Hello World")
 })
 

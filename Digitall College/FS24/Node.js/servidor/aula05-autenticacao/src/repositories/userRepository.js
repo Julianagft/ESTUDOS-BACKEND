@@ -3,7 +3,14 @@
 class UserRepository {
   constructor() {
     // Configuração do banco de dados JSON
-    this.users = [];
+    this.users = [
+      {
+        "nome": "Tita Rodrigues",
+        "email": "tita@email.com",
+        "senha": "Tita123456",
+        "id": 17
+      }
+    ];
   }
   
   create = (user) => {
@@ -44,13 +51,23 @@ class UserRepository {
   };
 
   updateUser = (id, newData) => {
-    const index = this.users.findIndex(usuario => usuario.id === id); 
   
-    if (index === -1) {
-      throw new Error(`Usuário não encontrado!`)
+    const index = this.users.findIndex(usuario => usuario.id == id)
+    
+    const newUser = this.users[index] = {
+      ...newData
     }
-  
-    Object.assign(this.users[index], newData);
+    // const index = this.users.find(usuarios => usuarios.id == id)
+    // const dadosAtualizados =  
+    
+
+    if (index  == -1) {
+      throw new Error(`Usuário não encontrado!`)
+    } 
+
+    return newUser;
+
+        
   }
   
 }

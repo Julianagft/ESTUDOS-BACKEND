@@ -31,7 +31,7 @@
       const id = request.params.id;
       const newData = request.body;
 
-      console.log(newData)
+      console.log({newData})
 
       const usuarioAtualizado = this.userService.updateUser(id, newData);
 
