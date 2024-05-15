@@ -1,39 +1,40 @@
 // Interage com o repositório de usuários e chama os métodos apropriados do serviço;
 
-class UserService {
-  constructor(userRepository) {
-    this.userRepository = userRepository;
+  class UserService {
+    constructor(userRepository) {
+      this.userRepository = userRepository;
+    }
+
+    create = (user) => {
+      this.userRepository.create(user);
+
+      return {message:"Usuário cadastrado com sucesso!", user};
+    };
+
+    listAll = () => {
+      const users = this.userRepository.listAll();
+      return users;
+    };
+
+    findById = (id) => {
+      const usuarioEncontrado = this.userRepository.findById(id);
+
+      return usuarioEncontrado;
+    };
+
+    updateUser = (id, newData) => {
+      const usuarioAtualizado = this.userRepository.updateUser(id, newData);
+
+      return {message: "Usuario atualizado com sucesso!", usuarioAtualizado} ;
+    }
+
+    deleteUser = (id) => {
+      
+      const usuarioDeletado = this.userRepository.deleteUser(id)
+
+      return {message: "Usuário deletado com sucesso!"}
+    }
+
   }
 
-  create = (user) => {
-    this.userRepository.create(user);
-
-    return {message:"Usuário cadastrado com sucesso!", user};
-  };
-
-  listAll = () => {
-    const users = this.userRepository.listAll();
-    return users;
-  };
-
-  findById = (id) => {
-    const usuarioEncontrado = this.userRepository.findById(id);
-
-    return usuarioEncontrado;
-  };
-
-  updateUser = (id, newData) => {
-    const usuarioAtualizado = this.userRepository.updateUser(id, newData);
-
-    return {message: "Usuario atualizado com sucesso!", usuarioAtualizado} ;
-  }
-
-  deleteUser = (id) => {
-    
-    const usuarioDeletado = this.userRepository.deleteUser(id)
-
-    return {message: "Usuário deletado com sucesso!"}
-  }
-}
-
-module.exports = UserService;
+  module.exports = UserService;

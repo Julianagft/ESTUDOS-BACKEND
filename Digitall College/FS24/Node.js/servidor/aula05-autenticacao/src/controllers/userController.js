@@ -45,6 +45,8 @@
       return response.json({ message: "Usuário deletado com sucesso!" });
   
     }
+
+    
   }
 
   module.exports = UserController;
