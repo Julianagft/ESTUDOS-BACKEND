@@ -64,7 +64,7 @@ class UserRepository {
       throw new Error(`Usuário não encontrado!`)
     } 
 
-    return newUser;
+    return this.users[index];
         
   };
 
@@ -82,9 +82,26 @@ class UserRepository {
 
   addChore = (id, chore) => {
      const user = this.findById(id);
-     console.log(user)
 
-     user.chores.push(chore) 
+     if (!user) {
+      throw new Error(`Usuário com o ID ${id} não encontrado!`);
+    }
+
+    const chores = [...user.chores];
+
+    chores.push(chore);
+
+     // Atualize o usuário com o novo array de tarefas
+    const updatedUser = {
+      ...user,
+      chores: chores
+    } // Atualiza o array de tarefas com o novo array de tarefas
+
+    console.log(updatedUser)
+    this.updateUser(id, updatedUser);
+    
+    return updatedUser
+  
   }
  
 }
