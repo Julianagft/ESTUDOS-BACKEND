@@ -4,8 +4,8 @@ import EmailController from '../controllers/emailController.js';
 
 const router = express.Router();
 
-router.post('/register-email-on-newsletter', EmailController.registerEmail);
+router.post('/sendEmails', EmailController.registerEmail);
 
-router.get('/get-emails', EmailController.getEmails);
+router.get('/getEmails', EmailController.getEmails);
 
 export default router;
