@@ -16,7 +16,20 @@ const users = [
   { id: 3, nome: "Davi", email: "davi@email.com", senha: "123" },
 ];
 
-function authMiddleware(req, res, next) {
+function errorMiddleware(err, req, res, next) {
+  console.log(err);
+
+  const error = {
+    code: 500,
+    type: "Internal Error",
+    message: "Algo inesperado aconteceu",
+  };
+
+
+  res.status(500).json(error)
+}
+
+function authMiddleware(err,req, res, next) {
   const tokenValidado = jwt.verify(req.headers.token, CHAVE_SECRETA);
   if (tokenValidado) {
     next();
@@ -51,6 +64,8 @@ app.post("/auth/login", (req, res) => {
     res.status(401).json({ message: "Senha/Email inválidos" });
   }
 });
+
+app.use(errorMiddleware); // Ele PRECISA ser o ultimo middleware a ser executado (não entendi pq).
 
 app.listen(8080, () => {
   console.log("rodando na 8080");

@@ -2,7 +2,7 @@
   "name": "2024-04-27",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon src/app"
   },
