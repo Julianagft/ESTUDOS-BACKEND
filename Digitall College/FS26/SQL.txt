@@ -1,0 +1,30 @@
+SHOW DATABASES;
+DROP DATABASE nome_database;
+CREATE DATABASE nome_database;
+USE nome_database; (entra dentro do banco de dados);
+
+CREATE TABLE produtos (
+	id INT AUTO_INCREMENT,
+	nome VARCHAR (100),
+	codBarra INT(8),
+	marca VARCHAR(30),
+	preco FLOAT,
+	PRIMARY KEY(id)
+);
+
+ INSERT INTO produtos (nome, codBarra, marca, preco)
+    VALUES ("tenis", 123456,"nike", 400.00);
+    
+SELECT * FROM produtos; (Pra ver a "tabela");
+	
+	
+CHAVE PRIMARIA: Forma de identificar a tabela
+CHAVE ESTRANGEIRA: Forma de relacionar uma tabela com outra;
+
+
+
+
+
+
+
+https://www.w3schools.com/sql/sql_datatypes.asp
