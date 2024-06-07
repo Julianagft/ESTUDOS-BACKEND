@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
 
 export default function Home() {
   
@@ -12,15 +10,15 @@ export default function Home() {
 
   // Conecta com a API;
 
-  function onSubmit() {
+  async function onSubmit() {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json")
 
-      fetch('http://localhost:3001/email/sendEmails', {
+      await fetch('http://localhost:3001/email/registerEmails', {
         method: 'POST',
         headers: myHeaders,
         body: JSON.stringify({
-          nome: nome,
+          name: nome,
           email: email
         }),
       });
