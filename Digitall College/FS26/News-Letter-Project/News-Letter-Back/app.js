@@ -1,6 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import emailRoutes from './routes/emailRoutes.js';
+import rateLimitMiddleware from './middlewares/rateLimitMiddleware.js';
+import logMiddleware from './middlewares/logMiddleware.js';
+import authMiddleware from './middlewares/authMiddleware.js';
 
 const app = express();
 
@@ -14,13 +17,16 @@ const PORT = 3001;
 
 //     next();
 // })
+app.use(cors()); // TEM QUE SER O PRIMEIRO!
+
+app.use(rateLimitMiddleware);
+app.use(logMiddleware);
+app.use(authMiddleware);
 
 app.use(express.json());
 
-app.use(cors());
-
-app.use('/email', emailRoutes);
-
+app.use('/emails', emailRoutes);
+app
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

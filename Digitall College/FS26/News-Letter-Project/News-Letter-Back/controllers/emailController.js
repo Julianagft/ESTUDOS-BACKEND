@@ -6,7 +6,7 @@ const EmailController = {
     getEmails: async (req, res) => {
         try {
             const resust = await getEmails();
-            res.status(200);
+            res.status(201);
             res.json(resust);
             return
         } catch (error) {
