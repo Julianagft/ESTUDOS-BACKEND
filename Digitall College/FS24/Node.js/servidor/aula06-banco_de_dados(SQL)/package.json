@@ -1,0 +1,20 @@
+{
+  "name": "2024-04-27",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "json-server": "^1.0.0-alpha.23",
+    "jsonwebtoken": "^9.0.2",
+    "node-json-db": "^2.3.0",
+    "nodemon": "^3.1.0",
+    "pg": "^8.12.0"
+  }
+}
