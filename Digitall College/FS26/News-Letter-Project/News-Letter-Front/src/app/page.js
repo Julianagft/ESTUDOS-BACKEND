@@ -1,32 +1,9 @@
-'use client'
-
-import { useState } from "react";
 import Image from "next/image";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+import FormEmail from "@/components/FormEmail";
 
 export default function Home() {
-  
-  const [nome, setNome] = useState('');
-  const [email, setEmail] = useState('');
-
-  // Conecta com a API;
-
-  function onSubmit() {
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json")
-
-      fetch('http://localhost:3001/email/sendEmails', {
-        method: 'POST',
-        headers: myHeaders,
-        body: JSON.stringify({
-          nome: nome,
-          email: email
-        }),
-      });
-      setNome("")
-      setEmail("")
-  }
+    
   
   return (
     <>    
@@ -40,9 +17,8 @@ export default function Home() {
             <div className=" flex-[3] px-16 min-h-full flex flex-col text-white justify-center items-center gap-5">
               <h1 className="text-2x1">Se inscreva para receber novidades</h1>
               <p className="text-lg">Nunca mais se esqueça de comprar seus insumos semanais com qualidade de vida!</p>
-              <input value={nome} onChange={(e) => setNome(e.target.value)} type="name" placeholder="Digite seu nome" className="w-full p-2 rounded text-blue-700" />
-              <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Digite seu email" className="w-full p-2 rounded text-blue-700" />
-              <button onClick={onSubmit} className="bg-indigo-500 p-4 rounded min-w-full">Inscrever</button>
+              <FormEmail />
+              
             </div>
           </div>
      
