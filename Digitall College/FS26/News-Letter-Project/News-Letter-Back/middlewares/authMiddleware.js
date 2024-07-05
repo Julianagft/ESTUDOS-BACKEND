@@ -1,21 +1,28 @@
-import validateToken from "../repository/authRepository.js"
+import {validateToken} from "../repository/authRepository.js"
 
-export default async function authMiddleware(req, res, next) {
+async function authMiddleware(req, res, next) {
     const { authorization } = req.headers
+
+    if (req.url === '/auth/new-token') {
+        next()
+        return
+    }
 
     if (!authorization) {
         res.status(401)
-        res.json({message: "Token não informado!"})
+        res.json({ message: 'Token não informado' })
         return
     }
 
-    const valid = await validateToken(authorization);
+    const valid = await validateToken(authorization)
 
-    if(!valid) {
+    if (!valid) {
         res.status(401)
-        res.json({message: "Token inválido!"})
+        res.json({ message: 'Token inválido' })
         return
     }
 
-    next();
+    next()
 }
+
+export default authMiddleware

@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 
-export default async function stringToHash(password) {
+export async function stringToHash(password) {
 
     const hash = crypto.createHash('sha256', process.env.HASH_KEY);
 

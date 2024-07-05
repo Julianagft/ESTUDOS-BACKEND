@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import emailRoutes from './routes/emailRoutes.js';
+import authRoutes from './routes/authRoutes.js'
 import rateLimitMiddleware from './middlewares/rateLimitMiddleware.js';
 import logMiddleware from './middlewares/logMiddleware.js';
 import authMiddleware from './middlewares/authMiddleware.js';
@@ -26,7 +27,7 @@ app.use(authMiddleware);
 app.use(express.json());
 
 app.use('/emails', emailRoutes);
-app
+app.use('/auth', authRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
