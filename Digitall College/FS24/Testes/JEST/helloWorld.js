@@ -1,6 +1,10 @@
 function helloWorld(arg) {
+    const defaultMessage = "Hello World!";
+
+    const errorTest = "Função aceita apenas string como argumento!"
+
     if (arg === undefined) {
-        return "Hello World" 
+        return  defaultMessage;
     }
         
     if (typeof arg === "string") {
@@ -8,8 +12,10 @@ function helloWorld(arg) {
     } 
     
     if (typeof arg !== "string") {
-        return "Função aceita apenas string como argumento!"
+        return errorTest;
     }
+
+    return defaultMessage;
 
 }
 
