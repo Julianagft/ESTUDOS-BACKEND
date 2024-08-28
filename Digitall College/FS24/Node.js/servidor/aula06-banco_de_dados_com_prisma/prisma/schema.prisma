@@ -9,13 +9,13 @@ datasource db {
 
 model users {
   id    Int     @id @default(autoincrement())
-  nome  String? @unique @db.VarChar
+  nome  String? @db.VarChar
   email String? @unique @db.VarChar
   senha String? @db.VarChar
-  links links[]
+  tasks tasks[]
 }
 
-model links {
+model tasks {
   id        Int     @id @default(autoincrement())
   descricao String? @db.VarChar
   user      users   @relation(fields: [usersId], references: [id])
