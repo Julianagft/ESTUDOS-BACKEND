@@ -1,0 +1,29 @@
+### list developers
+GET http://localhost:3000/developers
+
+### get developer
+GET http://localhost:3000/developers/3
+
+### create developer
+POST http://localhost:3000/developers
+Content-Type: application/json
+
+{
+// Preciso deixar uma linha em branco sempre, se não ele não vai reconhecer o payload
+    "name": "Lucas",
+    "email": "lucas@email.com",
+    "dateOfBirth": "1996-06-06"
+}
+
+### update developer
+PATCH http://localhost:3000/developers/3
+Content-Type: application/json
+
+{
+    "name": "Lucas",
+    "email": "teste@email.com",
+    "dateOfBirth": "1996-06-06"
+}
+
+### delete developer
+DELETE http://localhost:3000/developers/3
