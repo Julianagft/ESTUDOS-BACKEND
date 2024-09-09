@@ -1,0 +1,16 @@
+## USEFUL COMMANDS FOR DOCKER
+
+- Stops containers and removes containers, images… created by docker-compose up:
+    docker-compose down
+
+- Displays log output from services (example: docker-compose logs -f client):
+    docker-compose logs -f [service name]
+
+- Lists containers:
+    docker-compose ps
+
+- Executes a command in a running container (example: docker-compose exec server ls):
+    docker-compose exec [service name][command]
+
+- Lists images: 
+    docker-compose images

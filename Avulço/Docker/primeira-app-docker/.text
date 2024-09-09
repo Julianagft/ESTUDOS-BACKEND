@@ -1,0 +1,19 @@
+# COMANDOS úTEIS PARA DOCKER
+
+- LISTAR SUAS IMAGENS: docker image ls
+
+- EXCLUIR UMA IMAGEM ESPECÍFICA: docker image rm [nome da imagem]
+
+- EXCLUIR TODAS AS IMAGENS EXISTENTES: docker image rm $(docker images -a -q)
+
+-LISTAR TODOS OS CONTÊINERS EXISTENTES, ESTEJAM EM EXECUÇÃO OU NÃO: docker ps -a
+
+- PARAR UM CONTÊINER ESPECÍFICO: docker stop [nome do contêiner]
+
+- EXCLUIR TODOS OS CONTÊINERS (APENAS SE ESTIVEREM PARADOS): docker rm $(docker ps -a -q)
+
+-EXIBIR OS LOGS (REGISTROS) DE UM CONTÊINER: docker logs [nome do contêiner]
+
+
+
+
