@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Task, TaskStatus } from './task.model';
 import { v7 as uuid } from 'uuid';
 import { CreateTaskDto } from './dto/create-task.dto';
+import { json } from 'stream/consumers';
 
 @Injectable() //singleton that can be shared across the application.
 export class TasksService {
@@ -9,6 +10,10 @@ export class TasksService {
 
     getAllTasks(): Task[] {
         return this.tasks;
+    }
+
+    getTaskById(id: string): Task {
+        return this.tasks.find(task => task.id === id);
     }
 
     createTask (createTaskDto: CreateTaskDto): Task {
@@ -25,5 +30,16 @@ export class TasksService {
 
         return task;    
     }
+
+    deleteTask(id: string): void {
+        this.tasks = this.tasks.filter(task => task.id !== id);
+    }
+
+    updateTaskStatus(id: string, status: TaskStatus){
+        const task = this.getTaskById(id);
+        task.status = status;
+        return task;
+    }
+ 
 }
 
