@@ -1,2 +1,6 @@
 Para eu saber onde eu parei no curso:
 
+localhost:3001/tasks?status=OPEN (forma de procurar na url com filtro)
+
+localhost:3001/tasks?status=OPEN&search=room (acrescentando mais um parametro)
+
