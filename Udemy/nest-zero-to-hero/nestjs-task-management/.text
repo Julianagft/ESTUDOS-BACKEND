@@ -6,3 +6,4 @@ localhost:3001/tasks?status=OPEN&search=room (acrescentando mais um parametro)
 
 docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=Lobinho1! -d postgres (roda o container no postgress no docker)
 
+parei na aula 49.
