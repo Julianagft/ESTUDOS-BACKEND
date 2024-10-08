@@ -6,13 +6,14 @@ import { GetTasksFilterDto } from './dto/get-task-filter.dto';
 import { TaskRepository } from './task.repository';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Task } from './task.entity';
+import { Repository } from 'typeorm';
 
 @Injectable() //singleton that can be shared across the application.
 export class TasksService {
 
     constructor(
-        @InjectRepository(TaskRepository)
-        private taskRepository: TaskRepository
+        @InjectRepository(Task)
+        private taskRepository: Repository<Task>,
     ) {}
     
 
