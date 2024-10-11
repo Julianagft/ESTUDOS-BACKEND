@@ -51,49 +51,40 @@ export class TasksService {
         return found;
     }
 
-    // createTask (createTaskDto: CreateTaskDto): Task {
-    //     const { title, description } = createTaskDto;
-
-    //     const task: Task = {
-    //         id: uuid(),
-    //         title,
-    //         description,
-    //         status: TaskStatus.OPEN,
-    //     };
+    async deleteTask(id: string): Promise<void> {
+        const result = await this.taskRepository.delete(id);
         
-    //     this.tasks.push(task);
-
-    //     return task;    
-    // }
-
-        async createTask (createTaskDto: CreateTaskDto): Promise<Task> {
-            try {
-                const { title, description } = createTaskDto;
-        
-                const task = this.taskRepository.create({
-                    title,
-                    description,
-                    status: TaskStatus.OPEN,
-                });
-        
-                await this.taskRepository.save(task);
-                return task;
-            } catch (error) {
-                console.error('Erro ao salvar a tarefa no repositório:', error);
-                throw new Error('Erro ao salvar a tarefa no repositório');
-            }
+        if (result.affected === 0) {
+            throw new NotFoundException(`Task with ${id} not found`);
         }
+        
+    }
 
-    // deleteTask(id: string): void {
-    //     const found = this.getTaskById(id);
-    //     this.tasks = this.tasks.filter(task => task.id !== id);
-    // }
+    async createTask (createTaskDto: CreateTaskDto): Promise<Task> {
+        try {
+            const { title, description } = createTaskDto;
+    
+            const task = this.taskRepository.create({
+                title,
+                description,
+                status: TaskStatus.OPEN,
+            });
+    
+            await this.taskRepository.save(task);
+            return task;
+        } catch (error) {
+            console.error('Erro ao salvar a tarefa no repositório:', error);
+            throw new Error('Erro ao salvar a tarefa no repositório');
+        }
+    }
 
-    // updateTaskStatus(id: string, status: TaskStatus){
-    //     const task = this.getTaskById(id);
-    //     task.status = status;
-    //     return task;
-    // }
+    async updateTaskStatus(id: string, status: TaskStatus): Promise<Task> {
+        const task = await this.getTaskById(id);
+        task.status = status;
+        await this.taskRepository.save(task);
+
+        return task;
+    }
  
 }
 
