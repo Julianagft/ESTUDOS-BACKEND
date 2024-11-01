@@ -4,6 +4,7 @@ import { GetTasksFilterDto } from "./dto/get-task-filter.dto";
 import { Injectable } from "@nestjs/common";
 import { TaskStatus } from "./task-status-enum";
 import { CreateTaskDto } from "./dto/create-task.dto";
+import { User } from "src/auth/user.entity";
 
    @Injectable()
     export class TaskRepository extends Repository<Task>  {
@@ -30,13 +31,14 @@ import { CreateTaskDto } from "./dto/create-task.dto";
             return tasks;
         }
 
-        async createTask(createTaskDto: CreateTaskDto): Promise<Task> {
+        async createTask(createTaskDto: CreateTaskDto, user: User): Promise<Task> {
             const {title, description} = createTaskDto;
 
             const task = this.create({
                 title,
                 description,
                 status: TaskStatus.OPEN,
+                user,
             })
 
             await this.save(task);

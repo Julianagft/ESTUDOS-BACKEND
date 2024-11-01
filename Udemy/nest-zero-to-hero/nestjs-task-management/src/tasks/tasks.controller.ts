@@ -5,6 +5,8 @@ import { GetTasksFilterDto } from './dto/get-task-filter.dto';
 import { UpdateTaskStatusDto } from './dto/update-task-status.dto';
 import { Task } from './task.entity';
 import { AuthGuard } from '@nestjs/passport';
+import { GetUser } from 'src/auth/get-user.decorator';
+import { User } from 'src/auth/user.entity';
 
 @Controller('tasks')
 @UseGuards(AuthGuard()) //Auth midleware pra proteger a rota. 
@@ -22,10 +24,12 @@ export class TasksController {
     }
 
     @Post()
-    async createTask(@Body() createTaskDto: CreateTaskDto
+    async createTask(
+        @Body() createTaskDto: CreateTaskDto,
+        @GetUser() user: User
     ): Promise<Task> {
         try {
-            return await this.taskService.createTask(createTaskDto);
+            return await this.taskService.createTask(createTaskDto, user);
         } catch (error) {
             throw new HttpException(`Erro ao criar a tarefa: ${error.message}`, HttpStatus.INTERNAL_SERVER_ERROR);
         }
