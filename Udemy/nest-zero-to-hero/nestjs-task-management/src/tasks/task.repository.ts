@@ -1,13 +1,15 @@
 import { DataSource, Repository } from "typeorm";
 import { Task } from "./task.entity";
 import { GetTasksFilterDto } from "./dto/get-task-filter.dto";
-import { Injectable } from "@nestjs/common";
+import { Injectable, InternalServerErrorException } from "@nestjs/common";
 import { TaskStatus } from "./task-status-enum";
 import { CreateTaskDto } from "./dto/create-task.dto";
 import { User } from "src/auth/user.entity";
+import { Logger } from "@nestjs/common";
 
    @Injectable()
     export class TaskRepository extends Repository<Task>  {
+        private logger = new Logger('TaskRepository', { timestamp: true });
 
         constructor(private dataSource: DataSource) {
             super(Task, dataSource.createEntityManager());
@@ -27,9 +29,14 @@ import { User } from "src/auth/user.entity";
                 query.andWhere('LOWER(task.title) LIKE LOWER(:search) OR LOWER(task.description) LIKE LOWER(:search)', {search: `%${search}%`});
             } // Posso pesquisar por palavras chave dentro da url (exemplo: /tasks?search=algumaCoisa)
 
-            const tasks = await query.getMany();
+            try {
+                const tasks = await query.getMany();
 
-            return tasks;
+                return tasks;
+            } catch (error) {
+                this.logger.error(`Failed to get tasks for user "${user.username}". Filters: ${JSON.stringify(filterDto)}`, error.stack);
+                throw new InternalServerErrorException();
+            }
         }
 
         async createTask(createTaskDto: CreateTaskDto, user: User): Promise<Task> {
