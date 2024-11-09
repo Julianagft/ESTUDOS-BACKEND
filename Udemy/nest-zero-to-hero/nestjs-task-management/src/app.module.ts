@@ -1,10 +1,15 @@
   import { Module } from '@nestjs/common';
+  import { ConfigModule } from '@nestjs/config';
   import { TasksModule } from './tasks/tasks.module';
   import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 
   @Module({
     imports: [
+      ConfigModule.forRoot({ 
+        envFilePath: `.env.stage.${process.env.STAGE}`,
+        isGlobal: true,
+      }),
       TasksModule,
       TypeOrmModule.forRoot({
         //em partes globais usamos o forRoot, e em submodulos usamos o forFeature;
@@ -20,5 +25,10 @@ import { AuthModule } from './auth/auth.module';
       AuthModule,
     ],
   })
-  export class AppModule {}
+  export class AppModule {
+    constructor() {
+      console.log(`Current STAGE: ${process.env.STAGE}`);
+      console.log(`TEST_VALUE: ${process.env.TEST_VALUE}`);
+    }
+  }
 
