@@ -17,6 +17,7 @@
         inject: [ConfigService],
         // useFactory é uma função que será inicializada pelo Nest.js sempre que quisermos inicializar esse módulo.
         useFactory: async (configService: ConfigService) => ({
+          type: 'postgres',
           autoLoadEntities: true,
           synchronize: true,
           host: configService.get('DB_HOST'),
