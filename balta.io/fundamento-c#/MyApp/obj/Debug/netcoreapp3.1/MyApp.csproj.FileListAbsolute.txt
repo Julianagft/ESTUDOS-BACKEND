@@ -1,0 +1,13 @@
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\bin\Debug\netcoreapp3.1\MyApp.exe
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\bin\Debug\netcoreapp3.1\MyApp.deps.json
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\bin\Debug\netcoreapp3.1\MyApp.runtimeconfig.json
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\bin\Debug\netcoreapp3.1\MyApp.runtimeconfig.dev.json
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\bin\Debug\netcoreapp3.1\MyApp.dll
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\bin\Debug\netcoreapp3.1\MyApp.pdb
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\obj\Debug\netcoreapp3.1\MyApp.csprojAssemblyReference.cache
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\obj\Debug\netcoreapp3.1\MyApp.AssemblyInfoInputs.cache
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\obj\Debug\netcoreapp3.1\MyApp.AssemblyInfo.cs
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\obj\Debug\netcoreapp3.1\MyApp.csproj.CoreCompileInputs.cache
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\obj\Debug\netcoreapp3.1\MyApp.dll
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\obj\Debug\netcoreapp3.1\MyApp.pdb
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\MyApp\obj\Debug\netcoreapp3.1\MyApp.genruntimeconfig.cache
