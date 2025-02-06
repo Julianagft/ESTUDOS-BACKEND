@@ -1,15 +1,21 @@
 ﻿using System;
 // ("Test" é o nome do arquico que irei usar aqui dentro)
 
-namespace MyApp
-{
+namespace MyApp {
     class Program
     {
         static void Main(string[] args)
         {
             var texto = "Testando";
-            const IDADE = 24;
+            const int IDADE = 24;
+            byte meuByte = 255;
+            float salario = 1.500f;
+            decimal salarioAnual = 25000m;
+            bool usuarioCadastrado = false;
+            var verdade = true;
             Console.WriteLine(texto);
+            Console.WriteLine(salario); 
+            Console.WriteLine(salarioAnual); 
         }
     }
 }
