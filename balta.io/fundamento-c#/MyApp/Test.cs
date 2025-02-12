@@ -1,6 +1,13 @@
+using System;
+
 namespace MyApp {
     class Teste {
-
+        
+            
+        public void MainTeste() {
+            int inteiro = 100;
+            Console.WriteLine(inteiro);
+        }
     }
 }
 

@@ -6,16 +6,20 @@ namespace MyApp {
     {
         static void Main(string[] args)
         {
-            var texto = "Testando";
-            const int IDADE = 24;
-            byte meuByte = 255;
-            float salario = 1.500f;
-            decimal salarioAnual = 25000m;
-            bool usuarioCadastrado = false;
-            var verdade = true;
-            Console.WriteLine(texto);
-            Console.WriteLine(salario); 
-            Console.WriteLine(salarioAnual); 
+            int inteiro = 100;
+            float real = 10.50f;
+
+            // real = inteiro; (CONVERSÃO IMPLÍCITA)
+            // inteiro = (int)real; (CONVERSÃO EXPLÍCITA)
+
+            // inteiro = int.Parse("100"); (USANDO O PARSE);
+
+             inteiro = Convert.ToInt32(real); 
+            //converteu o real para um número inteiro
+
+            // Console.WriteLine(inteiro);
+            Console.WriteLine(inteiro);
+            
         }
     }
 }
