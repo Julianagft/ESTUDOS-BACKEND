@@ -1,0 +1,60 @@
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.exe
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.deps.json
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.runtimeconfig.json
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.dll
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.pdb
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.AssemblyInfoInputs.cache
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.AssemblyInfo.cs
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.csproj.CoreCompileInputs.cache
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.sourcelink.json
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.dll
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\refint\TextEditor.dll
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.pdb
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.genruntimeconfig.cache
+C:\Users\julia\OneDrive\Área de Trabalho\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\ref\TextEditor.dll
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.exe
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.deps.json
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.runtimeconfig.json
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.dll
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.pdb
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.AssemblyInfoInputs.cache
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.AssemblyInfo.cs
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.csproj.CoreCompileInputs.cache
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.sourcelink.json
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.dll
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\refint\TextEditor.dll
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.pdb
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.genruntimeconfig.cache
+C:\Users\julia\PROGRAMAÇÃO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\ref\TextEditor.dll
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.exe
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.deps.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.runtimeconfig.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.dll
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\bin\Debug\net8.0\TextEditor.pdb
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.AssemblyInfoInputs.cache
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.AssemblyInfo.cs
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.csproj.CoreCompileInputs.cache
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.sourcelink.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.dll
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\refint\TextEditor.dll
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.pdb
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\TextEditor.genruntimeconfig.cache
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-c#\TextEditor\obj\Debug\net8.0\ref\TextEditor.dll
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\bin\Debug\net8.0\TextEditor.exe
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\bin\Debug\net8.0\TextEditor.deps.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\bin\Debug\net8.0\TextEditor.runtimeconfig.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\bin\Debug\net8.0\TextEditor.dll
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\bin\Debug\net8.0\TextEditor.pdb
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\obj\Debug\net8.0\TextEditor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\obj\Debug\net8.0\TextEditor.AssemblyInfoInputs.cache
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\obj\Debug\net8.0\TextEditor.AssemblyInfo.cs
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\obj\Debug\net8.0\TextEditor.csproj.CoreCompileInputs.cache
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\obj\Debug\net8.0\TextEditor.sourcelink.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\obj\Debug\net8.0\TextEditor.dll
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\obj\Debug\net8.0\refint\TextEditor.dll
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\obj\Debug\net8.0\TextEditor.pdb
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\obj\Debug\net8.0\TextEditor.genruntimeconfig.cache
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\balta.io\fundamento-ccharpe\TextEditor\obj\Debug\net8.0\ref\TextEditor.dll
