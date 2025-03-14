@@ -120,7 +120,6 @@ namespace TextEditor
             Console.ReadLine();
             Menu();
         }
-        // so pra testar o github desktop 
-        
+
     }
 }
