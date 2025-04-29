@@ -6,6 +6,8 @@ import chalk from 'chalk';
 import fs from 'fs';
 
 import addAmount from './utils/addAmount.js';
+import checkAccount from './utils/checkAccount.js';
+import subtractAmount from './utils/subtractAmount.js';
 
 async function operations() {
     try {
@@ -32,7 +34,10 @@ async function operations() {
         } else if(action === 'Depositar') {
             deposit();
 
+        } else if (action === 'Consultar Saldo') {
+            getAcountBalance();
         } else if(action === 'Sacar') {
+            withdraw();
 
         } else if(action === 'Transferir') {
 
@@ -92,9 +97,8 @@ export async function deposit() {
             },
         ])
 
-        if (!fs.existsSync(`accounts/${accountName}.json`)) {
-            console.log(chalk.bgRed.black('Essa conta não existe!'));
-            return deposit();
+        if (!checkAccount(accountName)) {
+            return operations(); 
         }
 
         const { amount } = await inquirer.prompt([
@@ -110,7 +114,7 @@ export async function deposit() {
             },
         ])
         
-        addAmount(accountName, amount);
+        addAmount(accountName, Number(amount));
         operations();
          
     } catch (err) {
@@ -118,5 +122,65 @@ export async function deposit() {
     }
     
 }
+
+export async function getAcountBalance() {
+    try {
+        const { accountName } = await inquirer.prompt([
+            {
+                name: 'accountName',
+                message:'Qual o nome da sua conta?'
+            },
+        ])
+
+        if (!checkAccount(accountName)) {
+            return getAcountBalance(); 
+        }
+
+        const accountData = JSON.parse(fs.readFileSync(`accounts/${accountName}.json`, 'utf-8'));
+        console.log(chalk.green(`Seu saldo é: ${accountData.balance}`));
+        
+    } catch (err) {
+        console.error(chalk.red('Erro ao consultar saldo:'), err);
+        
+    }
+}
+
+export async function withdraw() {
+    try {
+        const { accountName } = await inquirer.prompt([
+            {
+                name: 'accountName',
+                message: 'Qual o nome da sua conta?'
+            }
+        ])
+
+        if (!checkAccount(accountName)) {
+            return withdraw(); 
+        }
+
+        const accountData = JSON.parse(fs.readFileSync(`accounts/${accountName}.json`, 'utf-8'));
+
+        const { amount } = await inquirer.prompt([
+            {
+                name: 'amount',
+                message: 'Qual o valor que você deseja sacar?',
+                validate(value) {
+                    if (isNaN(value)) {
+                        return 'Por favor, digite um número.';
+                    }
+                    return true;
+                }
+            },
+        ]);   
+
+        subtractAmount(accountName, Number(amount));
+
+        operations();
+
+    } catch (err) {
+        console.error(chalk.red('Erro ao sacar:'), err);
+    }
+}
+
 
 operations();

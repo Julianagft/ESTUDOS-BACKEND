@@ -3,7 +3,7 @@ import { deposit } from "../index.js";
 import getAccount from "./getAccount.js";
 import fs from 'fs'; 
 
-export default function addAmount(accountName, amount) {
+export default function subtractAmount(accountName, amount) {
     const account = getAccount(accountName);
 
     if (!amount || isNaN(amount)) { 
@@ -11,7 +11,7 @@ export default function addAmount(accountName, amount) {
         return deposit();
     }
 
-    account.balance = parseFloat(amount) + parseFloat(account.balance);
+    account.balance = parseFloat(account.balance) - parseFloat(amount);
 
     fs.writeFileSync(
         `accounts/${accountName}.json`,
@@ -19,5 +19,5 @@ export default function addAmount(accountName, amount) {
         'utf-8'
     );
 
-    console.log(chalk.green(`Depósito de R$${amount} realizado com sucesso!`));
-}
+    console.log(chalk.green(`Saque de R$${amount} realizado com sucesso!`));
+};
