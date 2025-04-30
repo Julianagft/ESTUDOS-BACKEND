@@ -138,6 +138,8 @@ export async function getAcountBalance() {
 
         const accountData = JSON.parse(fs.readFileSync(`accounts/${accountName}.json`, 'utf-8'));
         console.log(chalk.green(`Seu saldo é: ${accountData.balance}`));
+
+        operations();
         
     } catch (err) {
         console.error(chalk.red('Erro ao consultar saldo:'), err);
@@ -173,7 +175,11 @@ export async function withdraw() {
             },
         ]);   
 
-        subtractAmount(accountName, Number(amount));
+        const success = await subtractAmount(accountName, Number(amount), accountData);
+
+        if (!success) {
+            return withdraw();
+        }
 
         operations();
 
