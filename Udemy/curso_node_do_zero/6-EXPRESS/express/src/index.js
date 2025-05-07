@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import userRoutes from './users/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,7 +17,11 @@ app.use(
 
 app.use(express.json());
 
+app.use(express.static('public'));
+
 const basePath = path.join(__dirname, 'templates');
+
+app.use('/users', userRoutes);
 
 // const checkAuth = function(req, res, next) {
 //     req.authStatus = true;
@@ -31,23 +36,6 @@ const basePath = path.join(__dirname, 'templates');
 // }
 
 // app.use(checkAuth);
-
-app.get('/users/add', (req, res) => {
-    res.sendFile(`${basePath}/userForm.html`);
-});
-
-app.post('/users/save', (req, res) => {
-    console.log(req.body);
-});
-
-app.get('/users/:id', (req, res) => {
-    const id = req.params.id;
-
-    console.log(`Estamos buscando pelo usuário ${id}`);
-
-    res.sendFile(`${basePath}/users.html`);
-
-});
 
 app.get('/', (req, res) => {
     res.sendFile(`${basePath}/index.html`);
