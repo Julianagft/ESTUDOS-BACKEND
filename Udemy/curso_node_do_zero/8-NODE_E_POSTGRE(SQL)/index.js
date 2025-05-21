@@ -25,7 +25,7 @@ app.post('/books/insertbook', (req, res) => {
     const title = req.body.title;
     const pages = req.body.pages;
 
-    const query = `INSERT INTO books (title, page) VALUES ('${title}', '${pages}')`;
+    const query = `INSERT INTO books (title, pages) VALUES ('${title}', '${pages}')`;
 
     client.query(query, function (err) {
         if (err) {
@@ -34,6 +34,41 @@ app.post('/books/insertbook', (req, res) => {
         }
         res.redirect('/books');
     });
+});
+
+app.get('/books', (req, res) => {
+    const query = 'SELECT * FROM books';
+
+    client.query(query, function (err, result) {
+        if (err) {
+            console.error('Error fetching books', err);
+            
+            return res.status(500).send('Error fetching books');
+        }
+
+        const books = result.rows;
+        console.log("books: ", books);
+
+        res.render('books', { books });
+
+    })
+});
+
+app.get('/books/:id', (req, res) => {
+    const id = req.params.id;
+    const query = `SELECT * FROM books WHERE id = ${id}`;
+
+    client.query(query, function (err, result) {
+        if (err) {
+            console.error('Error fetching book', err);
+            return res.status(500).send('Error fetching book');
+        }
+
+        const book = result.rows[0];
+        console.log("book: ", book);
+
+        res.render('book', { book});
+    }) 
 });
 
 const client = new Client({
