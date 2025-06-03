@@ -65,11 +65,57 @@ app.get('/books/:id', (req, res) => {
         }
 
         const book = result.rows[0];
-        console.log("book: ", book);
 
         res.render('book', { book});
     }) 
 });
+
+app.get('/books/edit/:id', (req, res) => {
+    const id = req.params.id;
+    const query = `SELECT * FROM books WHERE id = ${id}`;
+
+    client.query(query, function (err, result) {
+        if (err) {
+            console.error('Error fetching book', err);
+            return res.status(500).send('Error fetching book');
+        }
+
+        const book = result.rows[0];
+        console.log("book: ", book);
+
+        res.render('editbook', { book });
+    }) 
+});
+
+app.post('/books/updatebook', (req, res) => {
+    const id = req.body.id;
+    const title = req.body.title;
+    const pages = req.body.pages;
+
+    const query = `UPDATE books SET title = '${title}', pages = '${pages}' WHERE id = ${id}`;
+
+    client.query(query, function (err) {
+        if (err) {
+            console.error('Error updating book', err);
+            return res.status(500).send('Error updating book');
+        }
+        res.redirect('/books');
+    });
+});
+
+app.post('/books/remove/:id', (req, res) => {
+    const id = req.params.id;
+    const query = `DELETE FROM books WHERE id = ${id}`;
+
+    client.query(query, function (err) {
+        if (err) {
+            console.error('Error deleting book', err);
+            return res.status(500).send('Error deleting book');
+        }
+        res.redirect('/books');
+    });
+});
+   
 
 const client = new Client({
     host: 'localhost',
