@@ -24,6 +24,10 @@ app.Run(async (HttpContext context) =>
         else if (context.Request.Path.StartsWithSegments("/employees"))
         {
             var employees = EmployeesRepository.GetAllEmployees();
+            //context.Response.ContentType = "application/json";
+            //var json = JsonSerializer.Serialize(employees);
+
+            //await context.Response.WriteAsync(json);
 
             foreach (var employee in employees)
             {
@@ -42,10 +46,28 @@ app.Run(async (HttpContext context) =>
             EmployeesRepository.AddEmployee(employee);
         }
     }
-    
-      
+    else if (context.Request.Method == "PUT")
+    {
+        if (context.Request.Path.StartsWithSegments("/employees"))
+        {
+            using var reader = new StreamReader(context.Request.Body);
+            var body = await reader.ReadToEndAsync();
+            var employee = JsonSerializer.Deserialize<Employee>(body);
 
+            var result = EmployeesRepository.UpdateEmployee(employee);
 
+            if (result)
+            {
+                context.Response.WriteAsync("Employee updated successfuly.");
+
+            }
+            else
+            {
+                await context.Response.WriteAsync("Employee not found.");
+            }
+
+        }
+    }
 
 });
 
@@ -68,6 +90,26 @@ static class EmployeesRepository
         {
             employees.Add(employee);
         }
+    }
+
+    public static bool UpdateEmployee(Employee? employee)
+    {
+        if ( employee is not null)
+        {
+            var emp = employees.FirstOrDefault(x => x.Id == employee.Id);
+
+            if (emp is not null)
+            {
+                emp.Name = employee.Name;
+                emp.Position = employee.Position;
+                emp.Salary = employee.Salary;
+
+                return true;
+            }
+
+            return false;         
+        }
+        return false;
     }
 
 }
