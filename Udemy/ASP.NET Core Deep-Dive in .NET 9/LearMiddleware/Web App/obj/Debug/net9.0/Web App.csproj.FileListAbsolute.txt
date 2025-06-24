@@ -1,0 +1,25 @@
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\bin\Debug\net9.0\appsettings.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\bin\Debug\net9.0\Web App.staticwebassets.endpoints.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\bin\Debug\net9.0\Web App.exe
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\bin\Debug\net9.0\Web App.deps.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\bin\Debug\net9.0\Web App.runtimeconfig.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\bin\Debug\net9.0\Web App.dll
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\bin\Debug\net9.0\Web App.pdb
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\Web App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\Web App.AssemblyInfoInputs.cache
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\Web App.AssemblyInfo.cs
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\Web App.csproj.CoreCompileInputs.cache
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\Web App.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\Web App.sourcelink.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\scopedcss\bundle\Web App.styles.css
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\Web App.dll
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\refint\Web App.dll
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\Web App.pdb
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\Web App.genruntimeconfig.cache
+C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\obj\Debug\net9.0\ref\Web App.dll
