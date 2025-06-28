@@ -7,4 +7,20 @@
     <RootNamespace>Web_App</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\NovaPasta\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="MiddlewareComponents\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\NovaPasta\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\julia\PROGRAMACAO\ESTUDOS-BACKEND\Udemy\ASP.NET Core Deep-Dive in .NET 9\LearMiddleware\Web App\NovaPasta\.editorconfig" />
+  </ItemGroup>
+
 </Project>

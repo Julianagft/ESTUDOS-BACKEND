@@ -12,28 +12,55 @@ app.Use(async (HttpContext context, RequestDelegate next) =>
     await context.Response.WriteAsync("MidAdleware #1: After calling next\r\n");
 });
 
-app.MapWhen((context) => context.Request.Query.ContainsKey("id"),
-    
-    (appBuilder) =>
-{
-    appBuilder.Use(async (HttpContext context, RequestDelegate next) =>
-    {
-        await context.Response.WriteAsync("Middleware #5: Before calling next\r\n");
+//MapWhen cria uma branch separada, e interrompe a branch principal;
+//app.MapWhen((context) => context.Request.Query.ContainsKey("id"),
 
-        await next(context);
+//    (appBuilder) =>
+//{
+//    appBuilder.Use(async (HttpContext context, RequestDelegate next) =>
+//    {
+//        await context.Response.WriteAsync("Middleware #5: Before calling next\r\n");
 
-        await context.Response.WriteAsync("MidAdleware #5: After calling next\r\n");
-    });
+//        await next(context);
 
-    appBuilder.Use(async (HttpContext context, RequestDelegate next) =>
-    {
-        await context.Response.WriteAsync("Middleware #6: Before calling next\r\n");
+//        await context.Response.WriteAsync("MidAdleware #5: After calling next\r\n");
+//    });
 
-        await next(context);
+//    appBuilder.Use(async (HttpContext context, RequestDelegate next) =>
+//    {
+//        await context.Response.WriteAsync("Middleware #6: Before calling next\r\n");
 
-        await context.Response.WriteAsync("MidAdleware #6: After calling next\r\n");
-    });
-});
+//        await next(context);
+
+//        await context.Response.WriteAsync("MidAdleware #6: After calling next\r\n");
+//    });
+//});
+
+// Cria uma nova branch, mas continua com a branch principal 'rejoinable branch';
+//app.UseWhen((context) => context.Request.Query.ContainsKey("id"),
+
+//    (appBuilder) =>
+//{
+//    appBuilder.Use(async (HttpContext context, RequestDelegate next) =>
+//    {
+//        await context.Response.WriteAsync("Middleware #5: Before calling next\r\n");
+
+//        await next(context);
+
+//        await context.Response.WriteAsync("MidAdleware #5: After calling next\r\n");
+//    });
+
+//    appBuilder.Use(async (HttpContext context, RequestDelegate next) =>
+//    {
+//        await context.Response.WriteAsync("Middleware #6: Before calling next\r\n");
+
+//        await next(context);
+
+//        await context.Response.WriteAsync("MidAdleware #6: After calling next\r\n");
+//    });
+//});
+
+
 
 // Middleware #2
 app.Use(async (context, next) =>
