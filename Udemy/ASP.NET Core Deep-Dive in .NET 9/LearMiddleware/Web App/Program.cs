@@ -1,84 +1,38 @@
+using Web_App.NovaPasta;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddTransient<MyCostomMiddlewareClass>();
+builder.Services.AddTransient<MyCostomExceptionHandler>();
+
 var app = builder.Build();
 
+app.UseMiddleware<MyCostomExceptionHandler>();
 
 // Middleware #1
-app.Use(async (HttpContext context, RequestDelegate next) =>
+app.Use(async (HttpContext context, Func<Task> next) =>
 {
     await context.Response.WriteAsync("Middleware #1: Before calling next\r\n");
 
-    await next(context);
+    await next();
 
-    await context.Response.WriteAsync("MidAdleware #1: After calling next\r\n");
+    //await context.Response.WriteAsync("MidAdleware #1: After calling next\r\n");
 });
 
-//MapWhen cria uma branch separada, e interrompe a branch principal;
-//app.MapWhen((context) => context.Request.Query.ContainsKey("id"),
-
-//    (appBuilder) =>
-//{
-//    appBuilder.Use(async (HttpContext context, RequestDelegate next) =>
-//    {
-//        await context.Response.WriteAsync("Middleware #5: Before calling next\r\n");
-
-//        await next(context);
-
-//        await context.Response.WriteAsync("MidAdleware #5: After calling next\r\n");
-//    });
-
-//    appBuilder.Use(async (HttpContext context, RequestDelegate next) =>
-//    {
-//        await context.Response.WriteAsync("Middleware #6: Before calling next\r\n");
-
-//        await next(context);
-
-//        await context.Response.WriteAsync("MidAdleware #6: After calling next\r\n");
-//    });
-//});
-
-// Cria uma nova branch, mas continua com a branch principal 'rejoinable branch';
-//app.UseWhen((context) => context.Request.Query.ContainsKey("id"),
-
-//    (appBuilder) =>
-//{
-//    appBuilder.Use(async (HttpContext context, RequestDelegate next) =>
-//    {
-//        await context.Response.WriteAsync("Middleware #5: Before calling next\r\n");
-
-//        await next(context);
-
-//        await context.Response.WriteAsync("MidAdleware #5: After calling next\r\n");
-//    });
-
-//    appBuilder.Use(async (HttpContext context, RequestDelegate next) =>
-//    {
-//        await context.Response.WriteAsync("Middleware #6: Before calling next\r\n");
-
-//        await next(context);
-
-//        await context.Response.WriteAsync("MidAdleware #6: After calling next\r\n");
-//    });
-//});
-
-
+app.UseMiddleware<MyCostomMiddlewareClass>();
 
 // Middleware #2
-app.Use(async (context, next) =>
+app.Use(async (HttpContext context, Func<Task> next) =>
 {
-    await context.Response.WriteAsync("Middleware #2: Before calling next\r\n");
-
-    await next(context);
-
-    await context.Response.WriteAsync("Middleware #2: After calling next\r\n"); await context.Response.WriteAsync("Middleware #3: After calling next\r\n");
-
+    throw new ApplicationException("Exception for testing");
 });
 
 // Middleware #3
-app.Use(async (HttpContext context, RequestDelegate next) =>
+app.Use(async (HttpContext context, Func<Task> next) =>
 {
     await context.Response.WriteAsync("Middleware #3: Before calling next\r\n");
 
-    await next(context);
+    await next();
 
     await context.Response.WriteAsync("Middleware #3: After calling next\r\n");
 });

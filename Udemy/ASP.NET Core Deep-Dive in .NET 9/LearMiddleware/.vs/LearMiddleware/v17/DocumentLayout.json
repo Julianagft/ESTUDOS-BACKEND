@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearMiddleware\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{243F0386-CE35-442D-81EE-25333EADA044}|Web App\\Web App.csproj|c:\\users\\julia\\programacao\\estudos-backend\\udemy\\asp.net core deep-dive in .net 9\\learmiddleware\\web app\\middlewarecomponents\\mycostommiddlewareclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{243F0386-CE35-442D-81EE-25333EADA044}|Web App\\Web App.csproj|solutionrelative:web app\\middlewarecomponents\\mycostommiddlewareclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{243F0386-CE35-442D-81EE-25333EADA044}|Web App\\Web App.csproj|c:\\users\\julia\\programacao\\estudos-backend\\udemy\\asp.net core deep-dive in .net 9\\learmiddleware\\web app\\middlewarecomponents\\mycostomexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{243F0386-CE35-442D-81EE-25333EADA044}|Web App\\Web App.csproj|solutionrelative:web app\\middlewarecomponents\\mycostomexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{243F0386-CE35-442D-81EE-25333EADA044}|Web App\\Web App.csproj|c:\\users\\julia\\programacao\\estudos-backend\\udemy\\asp.net core deep-dive in .net 9\\learmiddleware\\web app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MyCostomMiddlewareClass.cs",
-              "DocumentMoniker": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearMiddleware\\Web App\\MiddlewareComponents\\MyCostomMiddlewareClass.cs",
-              "RelativeDocumentMoniker": "Web App\\MiddlewareComponents\\MyCostomMiddlewareClass.cs",
-              "ToolTip": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearMiddleware\\Web App\\MiddlewareComponents\\MyCostomMiddlewareClass.cs",
-              "RelativeToolTip": "Web App\\MiddlewareComponents\\MyCostomMiddlewareClass.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MyCostomExceptionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearMiddleware\\Web App\\MiddlewareComponents\\MyCostomExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Web App\\MiddlewareComponents\\MyCostomExceptionHandler.cs",
+              "ToolTip": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearMiddleware\\Web App\\MiddlewareComponents\\MyCostomExceptionHandler.cs",
+              "RelativeToolTip": "Web App\\MiddlewareComponents\\MyCostomExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T20:39:50.93Z",
+              "WhenOpened": "2025-07-01T01:18:46.197Z",
               "EditorCaption": ""
             },
             {
@@ -41,9 +41,10 @@
               "RelativeDocumentMoniker": "Web App\\Program.cs",
               "ToolTip": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearMiddleware\\Web App\\Program.cs",
               "RelativeToolTip": "Web App\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T22:09:01.149Z"
+              "WhenOpened": "2025-06-24T22:09:01.149Z",
+              "EditorCaption": ""
             }
           ]
         }
