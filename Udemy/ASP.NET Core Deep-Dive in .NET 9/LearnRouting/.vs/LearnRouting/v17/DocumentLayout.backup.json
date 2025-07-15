@@ -22,9 +22,15 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mjrodrigue\\Desktop\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\Program.cs",
               "RelativeDocumentMoniker": "WebApp\\Program.cs",
+<<<<<<< HEAD
               "ToolTip": "C:\\Users\\mjrodrigue\\Desktop\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\Program.cs",
               "RelativeToolTip": "WebApp\\Program.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAwBEAAAATAAAAAAAAAA==",
+=======
+              "ToolTip": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\Program.cs",
+              "RelativeToolTip": "WebApp\\Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAAC8AAABwAAAAAAAAAA==",
+>>>>>>> dbee1c6748b24e6fb1a28f1c488619d13a1564a6
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T22:26:08.285Z",
               "EditorCaption": ""
