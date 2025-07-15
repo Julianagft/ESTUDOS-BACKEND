@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\WebApp.csproj": {}
+    "C:\\Users\\mjrodrigue\\Desktop\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\WebApp.csproj": {
+    "C:\\Users\\mjrodrigue\\Desktop\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\mjrodrigue\\Desktop\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\WebApp.csproj",
-        "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\obj\\",
+        "projectPath": "C:\\Users\\mjrodrigue\\Desktop\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\WebApp.csproj",
+        "packagesPath": "C:\\Users\\mjrodrigue\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mjrodrigue\\Desktop\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\LearnRouting\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mjrodrigue\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

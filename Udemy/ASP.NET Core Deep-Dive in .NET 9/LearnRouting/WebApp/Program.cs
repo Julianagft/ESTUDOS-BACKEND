@@ -1,17 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.Use(async (context, next) =>
-{
-    await next(context);
-});
-
 app.UseRouting();
-
-app.Use(async (context, next) =>
-{
-    await next(context);
-});
 
 app.UseEndpoints(endpoints =>
 {
@@ -24,6 +14,8 @@ app.UseEndpoints(endpoints =>
     {
         await context.Response.WriteAsync($"Delete the employee: {context.Request.RouteValues["id"]}");
     });
+
+    //Modal Biding 
 
     endpoints.MapGet("/categories/{size=medium}", async (HttpContext context) =>
     {
