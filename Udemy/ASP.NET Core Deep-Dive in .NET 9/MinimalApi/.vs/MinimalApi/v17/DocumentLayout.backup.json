@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mjrodrigue\\Desktop\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\MinimalApi\\",
+  "WorkspaceRootPath": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\MinimalApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9CACD3D7-AE8D-4663-AB7C-6096ED29C822}|WebApplication\\WebApplication.csproj|c:\\users\\mjrodrigue\\desktop\\estudos-backend\\udemy\\asp.net core deep-dive in .net 9\\minimalapi\\webapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9CACD3D7-AE8D-4663-AB7C-6096ED29C822}|WebApplication\\WebApplication.csproj|c:\\users\\julia\\programacao\\estudos-backend\\udemy\\asp.net core deep-dive in .net 9\\minimalapi\\webapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9CACD3D7-AE8D-4663-AB7C-6096ED29C822}|WebApplication\\WebApplication.csproj|solutionrelative:webapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,21 +14,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mjrodrigue\\Desktop\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\MinimalApi\\WebApplication\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\MinimalApi\\WebApplication\\Program.cs",
               "RelativeDocumentMoniker": "WebApplication\\Program.cs",
-              "ToolTip": "C:\\Users\\mjrodrigue\\Desktop\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\MinimalApi\\WebApplication\\Program.cs*",
-              "RelativeToolTip": "WebApplication\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAPAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\MinimalApi\\WebApplication\\Program.cs",
+              "RelativeToolTip": "WebApplication\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAtwCkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-11T09:40:08.476Z",
               "EditorCaption": ""

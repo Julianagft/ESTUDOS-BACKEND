@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
+using System.Xml.Linq;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,27 +31,33 @@ app.UseEndpoints(endpoints =>
 
     //});
 
-    //endpoints.MapGet("/employees/{id:int}", ([FromQuery(Name = "id")] int? identityNumber) =>
+    //endpoints.MapGet("/employees/{id:int}", ([AsParameters]GetEmployeeParameter param) =>
     //{
-    //    if (identityNumber.HasValue)
-    //    {
-    //        // Get a particular employee's information
-    //        var employee = EmployeesRepository.GetEmployeeById(identityNumber.Value);
+    //    // Get a particular employee's information
+    //    var employee = EmployeesRepository.GetEmployeeById(param.Id);
 
-    //        return employee;
-    //    }
+    //    employee.Name = param.Name;
+    //    employee.Position = param.Position;
 
-    //    return null;
-        
+    //    return employee;
+
     //});
 
-    endpoints.MapGet("/employees/", ([FromHeader]int id) =>
+    //endpoints.MapGet("/employees/", ([FromHeader]int id) =>
+    //{
+    //    object identityNumber = null;
+    //    var employee = EmployeesRepository.GetEmployeeById(id);
+
+    //    return employee;
+
+    //});
+
+    endpoints.MapGet("/employees", ([FromQuery(Name = "id")] int[] ids) =>
     {
-        object identityNumber = null;
-        var employee = EmployeesRepository.GetEmployeeById(id);
+        var employees = EmployeesRepository.GetEmployees();
+        var emps = employees.Where(x => ids.Contains(x.Id)).ToList();
 
-        return employee;
-
+        return emps;
     });
 
     endpoints.MapPost("/employees", async (HttpContext context) =>
@@ -187,10 +194,6 @@ public static class EmployeesRepository
         return false;
     }
 
-    internal static object GetEmployeeById(object value)
-    {
-        throw new NotImplementedException();
-    }
 }
 
 public class Employee
@@ -207,6 +210,16 @@ public class Employee
         Position = position;
         Salary = salary;
     }
+}
+
+struct GetEmployeeParameter
+{
+    [FromRoute]
+    public int Id { get; set; }
+    [FromQuery]
+    public string? Name { get; set; }
+    [FromHeader]
+    public string? Position { get; set; }
 }
 
 
