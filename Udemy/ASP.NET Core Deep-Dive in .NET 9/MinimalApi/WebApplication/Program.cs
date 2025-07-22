@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 using System.Xml.Linq;
 
@@ -207,6 +208,8 @@ public class Employee
     public int Id { get; set; }
     public string Name { get; set; }
     public string Position { get; set; }
+    [Required]
+    [Range (5000, 20000)]
     public double Salary { get; set; }
 
     public Employee(int id, string name, string position, double salary)
