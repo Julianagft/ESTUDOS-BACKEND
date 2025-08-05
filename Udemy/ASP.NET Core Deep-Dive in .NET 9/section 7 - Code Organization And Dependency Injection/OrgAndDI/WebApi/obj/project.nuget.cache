@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "NSgwgFI8m9E=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mjrodrigue\\Desktop\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\section 7 - Code Organization And Dependency Injection\\OrgAndDI\\WebApi\\WebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mjrodrigue\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\mjrodrigue\\.nuget\\packages\\minimalapis.extensions\\0.11.0\\minimalapis.extensions.0.11.0.nupkg.sha512",
+    "C:\\Users\\mjrodrigue\\.nuget\\packages\\minivalidation\\0.8.0\\minivalidation.0.8.0.nupkg.sha512"
+  ],
+  "logs": []
+}
