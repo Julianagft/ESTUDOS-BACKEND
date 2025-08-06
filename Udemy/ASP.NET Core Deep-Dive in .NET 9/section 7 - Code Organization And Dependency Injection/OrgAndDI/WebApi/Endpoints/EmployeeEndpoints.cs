@@ -14,7 +14,7 @@ namespace WebApi.Endpoints
                 return new HtmlResult(html);
             });
 
-            _ = app.MapGet("/employees", static (IEmployeesRepository employeesRepository) =>
+            app.MapGet("/employees", (IEmployeesRepository employeesRepository) =>
             {
                 var employees = employeesRepository.GetEmployees();
 

@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddProblemDetails();
 
+builder.Services.AddSingleton<IEmployeesRepository, EmployeesRepository>();
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

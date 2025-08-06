@@ -3,10 +3,10 @@ namespace WebApi.Models
 {
     public interface IEmployeesRepository
     {
-        abstract void AddEmployee(Employee? employee);
-        abstract bool DeleteEmployee(Employee? employee);
-        abstract Employee? GetEmployeeById(int id);
-        abstract List<Employee> GetEmployees();
-        abstract bool UpdateEmployee(Employee? employee);
+        void AddEmployee(Employee? employee);
+        bool DeleteEmployee(Employee? employee);
+        Employee? GetEmployeeById(int id);
+        List<Employee> GetEmployees();
+        bool UpdateEmployee(Employee? employee);
     }
 }
