@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\section8 - MVC Controllers (Routing)\\LearnMVCControllers\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0504E4-4B38-4843-AC37-3D9776A86AFF}|WebApp\\WebApp.csproj|c:\\users\\julia\\programacao\\estudos-backend\\udemy\\asp.net core deep-dive in .net 9\\section8 - mvc controllers (routing)\\learnmvccontrollers\\webapp\\controllers\\department$controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB0504E4-4B38-4843-AC37-3D9776A86AFF}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\department$controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0504E4-4B38-4843-AC37-3D9776A86AFF}|WebApp\\WebApp.csproj|c:\\users\\julia\\programacao\\estudos-backend\\udemy\\asp.net core deep-dive in .net 9\\section8 - mvc controllers (routing)\\learnmvccontrollers\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB0504E4-4B38-4843-AC37-3D9776A86AFF}|WebApp\\WebApp.csproj|solutionrelative:webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Department$Controller.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\section8 - MVC Controllers (Routing)\\LearnMVCControllers\\WebApp\\Controllers\\Department$Controller.cs",
+              "RelativeDocumentMoniker": "WebApp\\Controllers\\Department$Controller.cs",
+              "ToolTip": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\section8 - MVC Controllers (Routing)\\LearnMVCControllers\\WebApp\\Controllers\\Department$Controller.cs",
+              "RelativeToolTip": "WebApp\\Controllers\\Department$Controller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T10:56:36.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\section8 - MVC Controllers (Routing)\\LearnMVCControllers\\WebApp\\Program.cs",
+              "RelativeDocumentMoniker": "WebApp\\Program.cs",
+              "ToolTip": "C:\\Users\\julia\\PROGRAMACAO\\ESTUDOS-BACKEND\\Udemy\\ASP.NET Core Deep-Dive in .NET 9\\section8 - MVC Controllers (Routing)\\LearnMVCControllers\\WebApp\\Program.cs",
+              "RelativeToolTip": "WebApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T10:51:33.168Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
