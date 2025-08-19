@@ -1,0 +1,63 @@
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio files
+.vs/
+*.dbmdl
+*.vscode/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Microsoft Azure Web App publish settings
+PublishProfiles/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Cache files
+*.vsidx
+*.cache
+*.db
+*.pdb
+
+# WebAssembly build artifacts
+wwwroot/
+
+# Others
+*.exe
+*.dll
+*.bak
+*.swp
+*.sln.ide
+
+# Rider project files
+.idea/
+
+# JetBrains Rider
+*.DotSettings.user
+
+# Resharper
+*.DotSettings
+
+# Backup & hidden files
+*~ 
+*.swp
+*.sln.docstates
