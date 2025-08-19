@@ -10,16 +10,17 @@ namespace WebApp.Controllers
         {
             return "These are the departments.";
         }
-          
-        public string Details(int? id)
+
+        [Route("/departments/{id?}")]
+        public string Details(int id)
         {
             return $"Department info: {id}";
         }
 
         [HttpPost]
-        public string Create()
+        public object Create(Department? department)
         {
-            return "Created a new department";
+            return department?? new Department();
         }
 
         [HttpPost]
