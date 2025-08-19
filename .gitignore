@@ -61,3 +61,5 @@ wwwroot/
 *~ 
 *.swp
 *.sln.docstates
+
+node_modules
