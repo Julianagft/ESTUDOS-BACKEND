@@ -1,6 +1,5 @@
 import express from 'express';
 import exphbs from 'express-handlebars';
-import { Client } from 'pg';
 import pool from './db/conn.js';
 
 const app = express();
@@ -26,9 +25,11 @@ app.post('/books/insertbook', (req, res) => {
     const title = req.body.title;
     const pages = req.body.pages;
 
-    const query = `INSERT INTO books (title, pages) VALUES ('${title}', '${pages}')`;
+    const query = `INSERT INTO books (??, ??) VALUES (?, ?)`;
 
-    pool.query(query, function (err) {
+    const data = ['title', 'pages', title, pages];
+
+    pool.query(query, data, function (err) {
         if (err) {
             console.error('Error inserting book', err);
             return res.status(500).send('Error inserting book');
@@ -57,9 +58,11 @@ app.get('/books', (req, res) => {
 
 app.get('/books/:id', (req, res) => {
     const id = req.params.id;
-    const query = `SELECT * FROM books WHERE id = ${id}`;
+    const query = `SELECT * FROM books WHERE ?? = ?`;
 
-    pool.query(query, function (err, result) {
+    const data = ['id', id];
+
+    pool.query(query, data, function (err, result) {
         if (err) {
             console.error('Error fetching book', err);
             return res.status(500).send('Error fetching book');
@@ -73,9 +76,10 @@ app.get('/books/:id', (req, res) => {
 
 app.get('/books/edit/:id', (req, res) => {
     const id = req.params.id;
-    const query = `SELECT * FROM books WHERE id = ${id}`;
+    const query = `SELECT * FROM books WHERE ?? = ?`;
+    data = ['id', id]
 
-    pool.query(query, function (err, result) {
+    pool.query(query, data, function (err, result) {
         if (err) {
             console.error('Error fetching book', err);
             return res.status(500).send('Error fetching book');
@@ -93,9 +97,11 @@ app.post('/books/updatebook', (req, res) => {
     const title = req.body.title;
     const pages = req.body.pages;
 
-    const query = `UPDATE books SET title = '${title}', pages = '${pages}' WHERE id = ${id}`;
+    const query = `UPDATE books SET ?? = ?, ?? = ? WHERE ?? = ?`;
 
-    pool.query(query, function (err) {
+    const data = ['title', title, 'pages', pages, 'id', id];
+
+    pool.query(query, data, function (err) {
         if (err) {
             console.error('Error updating book', err);
             return res.status(500).send('Error updating book');
@@ -106,9 +112,11 @@ app.post('/books/updatebook', (req, res) => {
 
 app.post('/books/remove/:id', (req, res) => {
     const id = req.params.id;
-    const query = `DELETE FROM books WHERE id = ${id}`;
+    const query = `DELETE FROM books WHERE ?? = ?`;
 
-    pool.query(query, function (err) {
+    const data = ['id', id];
+
+    pool.query(query, data, function (err) {
         if (err) {
             console.error('Error deleting book', err);
             return res.status(500).send('Error deleting book');
