@@ -26,6 +26,7 @@ namespace WebApp.Controllers
         [HttpPost]
         public string Delete(int? id)
         {
+            
             return $"Deleted department: {id}";
         }
 
