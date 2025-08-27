@@ -3,7 +3,7 @@ import sequelize from "../db/conn.js";
 
 const db = sequelize;
 
-const User = db.define('User', {
+const User = db.define('user', {
     // id: {
     //     type: DataTypes.INTEGER,
     //     primaryKey: true,

@@ -4,7 +4,7 @@ import { Sequelize } from "sequelize";
 
 // Nome do banco, usuario, senha 
 
-const sequelize = new Sequelize("nodeSequelize2", "postgres", "", {
+const sequelize = new Sequelize("nodeSequelize2", "postgres", "Lobinho1!", {
     host: "localhost",
     dialect: "postgres",
     pool: {

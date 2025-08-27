@@ -20,8 +20,12 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.render('home');
+app.get('/', async (req, res) => {
+    const users = await User.findAll({ raw: true })
+
+    console.log(users)
+
+    res.render('home', { users: users });
 });
 
 app.get('/users/create', (req, res) => {
@@ -42,6 +46,18 @@ app.post('/users/create', async (req, res) => {
     await User.create({ name, occupation, newsletter });
 
     res.redirect('/');
+});
+
+app.get('/users/:id', async (req, res) => {
+    const id = req.params.id;
+
+    const user = await User.findOne({ raw: true, where: { id: id } });
+
+    if (!user) {
+        return res.status(404).send('Usuário não encontrado');
+    }
+
+    res.render('userview', { user });
 });
 
 conn.sync().then(() => {
