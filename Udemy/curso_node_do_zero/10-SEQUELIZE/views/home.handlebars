@@ -14,7 +14,11 @@
                 <p>Cargo: {{this.occupation}}</p>
                 <p>Newsletter: {{#if this.newsletter}}Inscrito{{else}}Não Inscrito{{/if}}</p>
                 <div class="actions">
-                    <a href="/users/{{this.id}}">Ver Detalhes</a>
+                    <a href="/users/{{this.id}}" class="details-btn">Ver Detalhes</a>
+                    <a href="/users/edit/{{this.id}}" class="edit-btn">Editar</a>
+                    <form action="users/delete/{{this.id}}" method="post">
+                        <input type="submit" value="Excluir" class="delete-btn">
+                    </form>
                 </div>
             </div>
         {{/each}}
