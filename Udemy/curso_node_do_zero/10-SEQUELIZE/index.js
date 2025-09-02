@@ -20,14 +20,6 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
 
-app.get('/', async (req, res) => {
-    const users = await User.findAll({ raw: true })
-
-    console.log(users)
-
-    res.render('home', { users: users });
-});
-
 app.get('/users/create', (req, res) => {
     res.render('adduser');
 });
@@ -76,13 +68,44 @@ app.get('/users/edit/:id', async (req, res) => {
     res.render('useredit', { user });
 });
 
+app.post('/users/edit', async (req, res) => {
+    const id = req.body.id;
+    const name = req.body.name;
+    const occupation = req.body.occupation;
+    let newsletter = req.body.newsletter;
+
+    if (newsletter === 'on') {
+        newsletter = true;
+    } else {
+        newsletter = false;
+    }
+
+    const userData = {
+        id,
+        name,
+        occupation,
+        newsletter
+    }
+
+    await User.update(userData, { where: { id: id } });
+
+    res.redirect('/');
+});
+
+app.get('/', async (req, res) => {
+    const users = await User.findAll({ raw: true })
+
+    console.log(users)
+
+    res.render('home', { users: users });
+});
+
 conn.sync().then(() => {
 
-    app.listen(3000);
-    console.log("Banco de dados sincronizado com sucesso, e rodando na porta 3000!");
+    app.listen(3001);
+    console.log("Banco de dados sincronizado com sucesso, e rodando na porta 3001!");
 
 }).catch((error) => {
     console.error("Erro ao sincronizar o banco de dados:", error);
 });
 
-// testar em casa com o banco de dados pra ver se ele criou a tabela. 
