@@ -2,9 +2,10 @@ import express from 'express';
 import exphbs from 'express-handlebars';
 import sequelize from './db/conn.js';
 import User from './models/User.js';
+import Address from './models/Address.js';
+
 
 const conn = sequelize;
-
 const app = express();
 
 app.use(
