@@ -101,6 +101,24 @@ app.get('/', async (req, res) => {
     res.render('home', { users: users });
 });
 
+app.post('/adress/create', async (req, res) => {
+    const userId = await req.body.userId;
+    const street = await req.body.street;
+    const number = await req.body.number;
+    const city = await req.body.city;
+
+    const adress = {
+        userId,
+        street,
+        number,
+        city
+    }
+
+    await Address.create({ adress });
+
+    res.redirect(`/users/edit/${userId}`);
+});
+
 conn.sync().then(() => {
 
     app.listen(3001);
