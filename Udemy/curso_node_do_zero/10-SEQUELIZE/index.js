@@ -64,9 +64,15 @@ app.post('/users/delete/:id', async (req, res) => {
 app.get('/users/edit/:id', async (req, res) => {
     const id = req.params.id;
 
-   const user =  await User.findOne({ raw: true, where: { id: id } });
+    try {
+        const user =  await User.findOne({ include: Address, where: { id: id } });
 
-    res.render('useredit', { user });
+        res.render('useredit', { user });
+
+    } catch (error) {
+        console.error("Erro ao buscar o usuário:", error);
+    }
+
 });
 
 app.post('/users/edit', async (req, res) => {
