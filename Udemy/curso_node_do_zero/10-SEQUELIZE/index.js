@@ -125,6 +125,15 @@ app.post('/adress/create', async (req, res) => {
     res.redirect(`/users/edit/${userId}`);
 });
 
+app.post('/address/delete', async (req, res) => {
+    const id = req.body.id;
+
+    await Address.destroy({ where: { id: id } });
+
+    res.redirect(`/users/edit/${UserId}`);
+});
+   
+
 conn.sync().then(() => {
 
     app.listen(3001);
