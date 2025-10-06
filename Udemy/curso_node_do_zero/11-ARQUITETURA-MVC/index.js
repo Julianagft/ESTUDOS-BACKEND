@@ -2,6 +2,7 @@ import express from 'express';
 import exphbs from 'express-handlebars';
 import sequelize from './db/conn.js';
 import Task from './models/Task.js';
+import taskRoutes from './routes/taskRoutes.js';
 
 const app = express();
 
@@ -20,6 +21,8 @@ app.use(express.json());
 
 
 app.use(express.static('public'));
+
+app.use('/tasks', taskRoutes);
 
 conn.sync().then(() => {
 
